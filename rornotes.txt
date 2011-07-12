@@ -3,28 +3,21 @@ $ rails new
 $ rails new sample_app -T						#without testing code
 $ rails server									#rails s
 $ rails server --environment production
-$ rails generate scaffold User name:string email:string
 $ rails console									# rails c  ,quit,ctrl+c,ctrl+d
-$ rails console --sandbox						#no changes
+$ rails console --sandbox				#no changes
 $ rails console test
-$ bundle install								#set HTTP_PROXY=http://172.30.4.63:3128		#set proxy=http://172.30.4.63:3128 
-$ bundle install rake
-$ gem install rails								# -p --http-proxy http://172.30.4.63:3128
-$ gem install rails --version 3.0.6		
-$ gem install win32console
-$ gem install annotate-model					#add comments for models
 $ rails generate controller Pages home contact
-$ [sudo] gem install autotest -v 4.3.2
-$ [sudo] gem install autotest-rails-pure -v 4.1.0
-$ sudo gem install autotest-standalone
-$ sudo gem install autotest-growl -p --http-proxy http://172.30.4.63:3128
-$ sudo gem install webrat						#need nokogiri
-$ sudo apt-get install libxslt-dev libxml2-dev	#nokogiri install error on  'libxml2 is missing'
 $ tail -f log/development.log					#show database log
-$ gem install factory_girl_rails				
-$ gem install gravatar_image_tag
-$ gem install faker -v 0.9.5
-$ gem install will_paginate -v 3.0.pre2
+
+
+
+$ ============================gem:   ============================
+$ gem install rails               # -p --http-proxy http://172.30.4.63:3128
+$ gem install rails --version 3.0.6   
+$ [sudo] gem install autotest -v 4.3.2
+$ gem install win32console
+$ bundle install                #set HTTP_PROXY=http://172.30.4.63:3128   #set proxy=http://172.30.4.63:3128 
+$ bundle install rake
 
 
 
@@ -136,69 +129,47 @@ $ ===============================================================
 
 
 
-Chapter 1 From Zero to Deploy					1
-1.1 Introduction								3
-1.2 Up and Running								9
-1.3 Version Control with Git					24
-1.4 Deploying									35
-											
-Chapter 2 A Demo App							41
-2.1 Planning the Application					41
-2.2 The Users Resource							44
-2.3 The Microposts Resource						58
-											
-Chapter 3 Mostly Static Pages					71
-3.1 Static Pages								74
-3.2 Our First Tests								84
-3.3 Slightly Dynamic Pages						103
-											
-Chapter 4 Rails-Flavored Ruby					119
-4.1 Motivation									119
-4.2 Strings and Methods							125
-4.3 Other Data Structures						134
-4.4 Ruby Classes								144
-											
-Chapter 5 Filling in the Layout 				157
-5.1 Adding Some Structure 						157
-5.2 Layout Links 								177
-5.3 User Signup: A First Step 					186
+[users]
+email
+password
+encrypted_password
+salt
+active_code   #active accout by email, 1=actived
+admin
+user_name
+author_name
 
-Chapter 6 Modeling and Viewing Users, Part I	193
-6.1 User Model 									194
-6.2 User Validations 							210
-6.3 Viewing Users 								227
 
-Chapter 7 Modeling and Viewing Users, Part II	239
-7.1 Insecure Passwords 							239
-7.2 Secure Passwords 							250
-7.3 Better User Views 							262
-											
-Chapter 8 Sign Up 								283
-8.1 Signup Form 								283
-8.2 Signup Failure 								292
-8.3 Signup Success 								305
-8.4 RSpec Integration Tests 					313
-											
-Chapter 9 Sign In, Sign Out 					325
-9.1 Sessions 									325
-9.2 Signin Failure 								332
-9.3 Signin Success 								338
-9.4 Signing Out 								354
 
-Chapter 10 Updating, Showing, and Deleting Users 365
-10.1 Updating Users 							365
-10.2 Protecting Pages 							376
-10.3 Showing Users 								384
-10.4 Destroying Users 							399
-											
-Chapter 11 User Microposts 						411
-11.1 A Micropost Model 							411
-11.2 Showing Microposts 						425
-11.3 Manipulating Microposts 					434
-											
-Chapter 12 Following Users 						461
-12.1 The Relationship Model 					463
-12.2 A Web Interface for Following and Followers 482
-12.3 The Status Feed 							507
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

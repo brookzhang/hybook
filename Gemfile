@@ -6,6 +6,8 @@ gem 'rails', '3.1.0.rc4'
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
+gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
+#gem 'will_paginate','2.3.15'
 
 # Asset template engines
 gem 'sass-rails', "~> 3.1.0.rc"
@@ -23,7 +25,13 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
+group :development do
+    gem 'rspec-rails','2.6.0'
+end
+
 group :test do
-  # Pretty printed test output
+	# Pretty printed test output
   gem 'turn', :require => false
+  gem 'rspec','2.6.0'
+  gem 'webrat','0.7.3'
 end
