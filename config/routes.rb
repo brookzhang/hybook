@@ -1,8 +1,32 @@
 Hybook::Application.routes.draw do
+
+  
+  get "pages/help"
+
+  get "sessions/new"
+
+  resources :users do
+    member do
+      get :following , :followers
+    end
+  end
+  resources :sessions , :only =>[:new,:create,:destroy]
+  resources :microposts,:only=>[:create,:destroy]
+  resources :relationships, :only =>[:create , :destroy]
+  
+
+  match '/toplist',:to=> 'pages#toplist'
+  match '/about',:to=>'pages#about'
+  match '/help',:to=>'pages#help'
+  match '/signup',:to=>'users#new'
+  match '/signin',:to => 'sessions#new'
+  match '/signout', :to=>'sessions#destroy'
+  
+  root :to=>'pages#home'
+  
   get "pages/home"
 
   get "pages/toplist"
-
   get "pages/about"
 
   # The priority is based upon order of creation:

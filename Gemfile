@@ -26,7 +26,7 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 group :development do
-    gem 'rspec-rails','2.6.0'
+    gem 'rspec-rails','2.6.1'
 end
 
 group :test do
