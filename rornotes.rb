@@ -1,5 +1,5 @@
-$========================================================== user from 20110714 to 20110914
-[users]
+#========================================================== user from 20110714 to 20110914
+#[users] &&
 id
 email                 varchar(50)
 name                  nvarchar(50)     
@@ -17,34 +17,23 @@ maintainer            boolean    可添加非原著书,不受maxbook限制
 author                boolean 
 author_name           nvarchar(50)
 
-
-[relationships]
+#[relationships] &&
 id
 follower_id           integer
 followed_id           integer
 
 
-[comments] only for books in favorites  书评
-id
-book_id               integer 
-user_id               integer  
-title                 nvarchar(50)
-content               nvarchar(4000)
-all_click             integer
-status                integer         1，book固顶，4，锁定 (by author)
-submit_to_homepage    boolean
 
-
-[microposts] 小谈
+#[microposts] &&   小谈
 id
 book_id               integer
-comment_id            integer     (could be removed by comment's owner) 
+comment_id            integer     (could be removed by comment  owner) 
 forked_id             integer     forked from others micropost id
 user_id               integer  
 content               nvarchar(366)
 
 
-[favorites] 
+#[favorites] 
 id
 book_id               integer    
 chapter_id            integer         章節ID (第一次收藏,記錄第一節. 閱讀時,記錄當前章節)
@@ -54,8 +43,8 @@ last_read_at          datetime
 
 
 
-'==========================================================book
-[categories]
+#==========================================================book
+#[categories]
 id
 parent_id             integer
 title                 nvarchar(50)
@@ -63,7 +52,7 @@ description           nvarchar(500)
 show_on_header        boolean
 sequence              int
 
-'[books]
+#[books]
 id
 category_id           int
 user_id               int
@@ -79,14 +68,14 @@ week_click            int
 day_click             int
 last_click_at         datetime  
 
-'[sections]   分卷
+#[sections]   分卷
 id                    int
 book_id               int
 title                 nvarchar(50)
 description           nvarchar(500)
 sequence              int
 
-[chapters]  
+#[chapters]  
 id  
 section_id            int 
 sequence              int        
@@ -95,9 +84,18 @@ content               ntext
 public                boolean         是否公开
 
 
+#[comments] only for books in favorites  书评
+id
+book_id               integer 
+user_id               integer  
+title                 nvarchar(50)
+content               nvarchar(4000)
+all_click             integer
+status                integer         1，book固顶，4，锁定 (by author)
+submit_to_homepage    boolean
 
-'========================================================== site 
-[lookups]
+#========================================================== site 
+#[lookups]
 id
 code                  varchar(50)
 category              varchar(50)
@@ -111,7 +109,7 @@ SiteBak                   網站備案信息
 bodystyle                 主站默認風格
 bookstyle                 讀書頁面默認風格
 
-'==========================================================plan
+#==========================================================plan
 1.淡化阅读,强化读者交互
 2.只可以对添加到收藏的书发表评论.评论可以被跟帖post,post可以被移除出此评论,
 3.microposts可以被fork,可以作为comment的跟帖, 也可以作为对book的单独microposts但不列在book页面(只显示数量,可在单独页面查看),只显示给follower
@@ -123,35 +121,35 @@ bookstyle                 讀書頁面默認風格
 
 
 
-
-
+#============================operation============================
+# 创建一个表及相关的mvc
+$ rails generate model User name:string email:string    #User , not Users ,created a migrate in /db/migrate/, edit if needs.
+$ rake db:migrate 
+$ rails generate controller Users show                  #Users ,not User
 
 
 
 
  
 
-$============================rails:============================
+#============================rails:============================
 $ rails new sample_app -T						#without testing code
 $ rails server									#rails s
 $ rails server --environment production
 $ rails console									# rails c  ,quit,ctrl+c,ctrl+d
 $ rails console --sandbox				#no changes
 $ rails console test
-$ rails generate model User name:string email:string    #User , not Users
-$ rails generate controller Users show                  #Users ,not User
 
 $ tail -f log/development.log					#show database log
 
 
-$ ============================gem:   ============================
+# ============================gem:   ============================
 $ set HTTP_PROXY=http://172.30.4.63:3128   #set proxy=http://172.30.4.63:3128 
 $ gem install rails               # -p --http-proxy http://172.30.4.63:3128
 
 
-$ ============================rake:   ruby make============================
+# ============================rake:   ruby make============================
 $ rake db:create
-$ rake db:migrate # RAILS_ENV=production
 $ rake db:test:prepare
 $ rake db:reset									#clear database
 $ rake db:populate              # lib/tasks/sample_data.rake task :populate =>:environment 
@@ -160,7 +158,7 @@ $ rake db:rollback STEP=3         #回滚最近的3次的迁移任务
 $ rake db:migrate:redo            #重做迁移
 
 
-$ ============================git:============================
+# ============================git:============================
 $ git config --global user.name "name"
 $ git config --global user.email "mail"
 $ git config --global http.proxy http://172.30.4.63:3128
@@ -186,7 +184,7 @@ $ git add . / git commit -am "massage" / git checkout master / git merge other-b
 $ git checkout master / git checkout -b new-branch      #make a new branch, and leave on new-branch
 
 
-$ ============================github:============================
+# ============================github:============================
 $ git remote add origin git@github.com:brookzhang/first_app.git
 $ git push origin master
 $ git push origin master:master
@@ -199,7 +197,7 @@ $ git remote rm heroku
 $ git remote add heroku git@heroku.com:brook.git
 
 
-$ ============================rspec:============================
+# ============================rspec:============================
 $ rails generate rspec:install
 $ rails generate integration_test layout_links
 $ rspec spec/
@@ -211,7 +209,7 @@ $ rspec spec/models/user_spec.rb -e "should have an encrypted password attribute
 
 
 
-$ ============================heroku:============================
+# ============================heroku:============================
 $ sudo gem install heroku
 $ heroku keys:add               #follow steps ,add ssh public key
 $ heroku create
@@ -221,14 +219,14 @@ $ heroku db:push								#push data to heroku
 $ heroku console                #same as rails console on heroku
 
 
-$ ============================vim:============================
+# ============================vim:============================
 $ :w                                            #write = save
 $ :q                                            #quit
 $ d                                             #delete
 
 
 
-$ ============================ubuntu:============================
+# ============================ubuntu:============================
 $ cd                                            #change directory
 $ ls                                            #list
 $ mv                                            #move

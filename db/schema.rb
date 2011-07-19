@@ -10,7 +10,73 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110715085204) do
+ActiveRecord::Schema.define(:version => 20110719062357) do
+
+  create_table "books", :force => true do |t|
+    t.integer  "category_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "description"
+    t.string   "keywords"
+    t.string   "cover_picture_url"
+    t.boolean  "author",            :default => false
+    t.integer  "status",            :default => 0
+    t.integer  "all_click",         :default => 0
+    t.integer  "month_click",       :default => 0
+    t.integer  "week_click",        :default => 0
+    t.integer  "day_click",         :default => 0
+    t.datetime "last_click_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "books", ["category_id"], :name => "index_books_on_category_id"
+  add_index "books", ["user_id"], :name => "index_books_on_user_id"
+
+  create_table "categories", :force => true do |t|
+    t.integer  "parent_id",      :default => 0
+    t.string   "title"
+    t.string   "description"
+    t.boolean  "show_on_header", :default => false
+    t.integer  "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "chapters", :force => true do |t|
+    t.integer  "section_id"
+    t.integer  "sequence"
+    t.string   "title"
+    t.string   "content"
+    t.boolean  "public",     :default => true
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "chapters", ["section_id"], :name => "index_chapters_on_section_id"
+
+  create_table "comments", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.string   "content"
+    t.integer  "all_click",          :default => 0
+    t.integer  "status"
+    t.boolean  "submit_to_homepage"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "comments", ["book_id"], :name => "index_comments_on_book_id"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "lookups", :force => true do |t|
+    t.string   "code"
+    t.string   "category"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "microposts", :force => true do |t|
     t.integer  "book_id"
@@ -36,6 +102,17 @@ ActiveRecord::Schema.define(:version => 20110715085204) do
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
+
+  create_table "sections", :force => true do |t|
+    t.integer  "book_id"
+    t.string   "title"
+    t.string   "description"
+    t.integer  "sequence"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sections", ["book_id"], :name => "index_sections_on_book_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"
