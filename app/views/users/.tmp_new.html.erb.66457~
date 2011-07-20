@@ -1,7 +1,0 @@
-<<<<<<< HEAD
-<h1>sign up</h1>
-<%=render 'form'%>
-=======
-<h1>sign up</h1>
-<%=render 'form'%>
->>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
