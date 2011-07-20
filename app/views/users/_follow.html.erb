@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 <%= form_for current_user.relationships.build(:followed_id =>@user.id) , :remote =>true  do |f| %>
   <div><%= f.hidden_field :followed_id%></div>
 	<div class="actions"><%= f.submit "Follow" %></div>
+=======
+<%= form_for current_user.relationships.build(:followed_id =>@user.id) , :remote =>true  do |f| %>
+  <div><%= f.hidden_field :followed_id%></div>
+	<div class="actions"><%= f.submit "Follow" %></div>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
 <%end%>

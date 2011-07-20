@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 <%= form_for current_user.relationships.find_by_followed_id(@user.id),
           :html =>{:method=>:delete} ,:remote => true  do |f| %>
   <div><% f.hidden_field :followed_id%></div>
 	<div class="actions"><%= f.submit "Unfollow" %></div>
+=======
+<%= form_for current_user.relationships.find_by_followed_id(@user.id),
+          :html =>{:method=>:delete} ,:remote => true  do |f| %>
+  <div><% f.hidden_field :followed_id%></div>
+	<div class="actions"><%= f.submit "Unfollow" %></div>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
 <%end%>

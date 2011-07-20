@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="user_info">
   <a href="<%= user_path(current_user) %>">
     <%= #gravatar_for current_user, :size => 30 %>
@@ -9,3 +10,16 @@
     </span>
   </a>
 </div>
+=======
+<div class="user_info">
+  <a href="<%= user_path(current_user) %>">
+    <%= #gravatar_for current_user, :size => 30 %>
+    <span class="user_name">
+      <%= current_user.name %>
+    </span>
+    <span class="microposts">
+      <%= pluralize(current_user.microposts.count, "micropost") %>
+    </span>
+  </a>
+</div>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <li>
 	<%=gravatar_for user , :size=>30%>
 	<%= link_to user.name,user%>
@@ -5,3 +6,12 @@
 	 | <%=link_to "delete",user,:method=>:delete ,:confirm=>"You sure?" , :title=>"Delete #{user.name}"%>
 	<%end%>
 </li>
+=======
+<li>
+	<%=gravatar_for user , :size=>30%>
+	<%= link_to user.name,user%>
+	<%if current_user.admin?  %>
+	 | <%=link_to "delete",user,:method=>:delete ,:confirm=>"You sure?" , :title=>"Delete #{user.name}"%>
+	<%end%>
+</li>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
