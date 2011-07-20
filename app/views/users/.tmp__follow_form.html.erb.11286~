@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+<% unless current_user?(@user)%>
+  <div id="follow_form">
+  	<% if current_user.following?(@user)%>
+		  <%= render 'unfollow'%>
+		<%else%>
+		  <%= render 'follow'%>
+		<%end%>
+  </div>
+=======
+<% unless current_user?(@user)%>
+  <div id="follow_form">
+  	<% if current_user.following?(@user)%>
+		  <%= render 'unfollow'%>
+		<%else%>
+		  <%= render 'follow'%>
+		<%end%>
+  </div>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
+<%end%>

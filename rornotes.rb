@@ -1,4 +1,4 @@
-<<<<<<< HEAD    set HTTP_PROXY=http://172.30.4.63:3128
+set HTTP_PROXY=http://172.30.4.63:3128
 #========================================================== user from 20110714 to 20110914
 #[users] &&
 id
@@ -492,7 +492,4 @@ $ sudo killall apt-get
  
  
  
- 
- 
->>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
  

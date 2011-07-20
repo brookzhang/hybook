@@ -1,0 +1,14 @@
+<<<<<<< HEAD
+<h1>All users</h1>
+<%=will_paginate%>
+<ul>
+	 <%=render @users%>
+</ul>
+=======
+<h1>All users</h1>
+<%=will_paginate%>
+<ul>
+	 <%=render @users%>
+</ul>
+>>>>>>> 64060d119c0e9e8a89ee1ad26a37d3f4de2a9bed
+<%=will_paginate%>
