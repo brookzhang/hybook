@@ -1,0 +1,34 @@
+<% content_for(:head) do -%>
+  <%= javascript_include_tag('maintain/books.js') %>
+<% end -%>
+
+<h1>Your books</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Published At</th>
+      <th>Title</th>
+      <th>Excerpt</th>
+      <th>Comments</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% if @books.empty? -%>
+      <tr><td colspan="5">There are no books at this time.</td></tr>
+    <% else -%>
+      <%= render :partial => 'book', :collection => @books %>
+    <% end -%>
+  </tbody>
+
+  <tfoot>
+    <% if @books.total_pages > 1 -%>
+      <tr class="pagination">
+        <td colspan="5">
+          <%= will_paginate(@books, :previous_label => '« Newer', :next_label => 'Older »') %>
+        </td>
+      </tr>
+    <% end -%>
+  </tfoot>
+</table>

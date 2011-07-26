@@ -6,27 +6,11 @@ body {
 	background: #eee;
 }
 
-header {
-	padding-top: 20px;
+ul.headermenu {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
 }
-
-header img {
-	padding: 1em;
-	background: #fff;
-}
-
-
-section {
-	margin-top: 1em;
-	font-size: 120%;
-	padding: 20px;
-	background: #fff;
-}
-
-section h1 {
-	font-size: 200%;
-}
-
 
 /* Links */
 a {

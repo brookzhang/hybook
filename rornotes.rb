@@ -135,11 +135,12 @@ $ rails generate controller Users show                  #Users ,not User
 
 #============================rails:============================
 $ rails new sample_app -T						#without testing code
-$ rails server									#rails s
+$ rails server									#rails s,quit: ctrl+c
 $ rails server --environment production
-$ rails console									# rails c  ,quit,ctrl+c,ctrl+d
+$ rails console									# rails c  ,quit ctrl+d
 $ rails console --sandbox				#no changes
 $ rails console test
+$ first_user = User.first     =User.find(1) User.all
 
 $ tail -f log/development.log					#show database log
 
