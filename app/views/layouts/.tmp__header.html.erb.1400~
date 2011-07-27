@@ -1,0 +1,25 @@
+
+	<table>
+		<tr>
+			<td class="headermenu">
+				<%=link_to logo,root_path %>&nbsp;
+		      <%= link_to "Home", root_path %>&nbsp;
+		      <%= link_to "小说小读", root_path %>&nbsp;
+		      <%= link_to "治身齐家", root_path %>&nbsp;
+		      <%= link_to "云在青天", root_path %>&nbsp;
+		      <%= link_to "浅吟低酌", root_path %>&nbsp;
+		      <%= link_to "排行榜", root_path %>&nbsp;
+		      <%if signed_in? %>
+		      <%=link_to "Users",users_path%>&nbsp;
+		      <%=link_to current_user.name,current_user%>&nbsp;
+		      <%=link_to "Settings",edit_user_path(current_user)%>&nbsp;
+		      <%end%>
+		      <%= link_to "Help", help_path %>&nbsp;
+		      <% if signed_in? %>
+		      <%= link_to "Sign out", signout_path , :method =>:delete %>&nbsp;
+		      <%else %>
+		      <%=link_to "Sign in",signin_path %>&nbsp;
+		      <%end%>
+			</td>
+		</tr>
+	</table>

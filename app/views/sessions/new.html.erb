@@ -1,20 +1,46 @@
-<h1>Sign in</h1>
-<%=form_for(:session , :url=>sessions_path) do |f|%>
-  <div class="field">
-  	<%=f.label :email%><br>
-	  <%=f.text_field :email%>
-  </div>
-	
-	<div class="field">
-		<%=f.label :password%><br>
-		<%=f.password_field :password%>
-	</div>
-	
-	<div class="actions">
-		<%=f.submit "Sign in"%>
-	</div>
-  	
+<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
+  <TR>
+      <TD width="800px" vAlign=top>
+        
+        <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
+          <TR>
+            <TD class="DarkTh"  vAlign=top align=center> 登录 </td>
+          </tr>
+          <TR>
+            <TD class="LightContainerTD" vAlign=top >
+              
+              <table  class="tableLogin" width="400" cellpadding="3" cellspacing="1" border="0"  align=center>
+              	<tr><td    height=23 colspan=2 align="center">&nbsp;<br><br>
+                  <div class="BottomBorderlineDiv"></div></td>
+								</tr>
+              	<%=form_for(:session , :url=>sessions_path) do |f|%>
+								<tr>
+	                <td width="150"  class="forumRow" height=23 align="right">Email :&nbsp;</td>
+	                <td  class="forumRow" align="left">&nbsp;<%=f.text_field :email%></td>
+	              </tr>
+								<tr>
+                  <td width="150"  class="forumRow" height=23 align="right">密码 :&nbsp;</td>
+                  <td  class="forumRow" align="left">&nbsp;<%=f.password_field :password%></td>
+                </tr>
+								<tr><td  class="forumRowHighlight" height=23 colspan=2 align=center>
+	                <%=f.submit "进入"%> 
+									&nbsp;&nbsp;<%=link_to "注册新账号",signup_path%>
+	              </td></tr>
+								<%end%>
 
-<%end%>
+              <tr><td class="forumRow" height=23 colspan=2>&nbsp;<br><br><br><br></td></tr>
+              
+            </table>
+            </td>
+          </tr>
+            
+        </table>
+      </td>
+    </tr>
+</table>
 
-<p>New user? <%=link_to "Sign up now!",signup_path%></p>
+
+
+
+
+<p></p>
