@@ -38,5 +38,6 @@ module Hybook
 
     # Enable the asset pipeline
     config.assets.enabled = true
+    config.serve_static_assets = true
   end
 end

@@ -384,7 +384,7 @@ $============================rails:============================
 $ rails new sample_app -T						#without testing code
 $ rails server									#rails s
 $ rails server --environment production
-$ rails console									# rails c  ,quit,ctrl+c,ctrl+d
+$ rails console									# rails c  ,quit,ctrl+d
 $ rails console --sandbox				#no changes
 $ rails console test
 $ rails generate model User name:string email:string    #User , not Users

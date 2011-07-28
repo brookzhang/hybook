@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def show
     @user=User.find(params[:id])
-    @title = @user.name
+    @title = "Bookroom"
     @microposts =  @user.microposts.paginate(:page=>params[:page])
     #@microposts = @user.microposts ? @user.microposts.paginate(:page=>params[:page]) : @user.microposts
   end
@@ -27,9 +27,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       sign_in @user
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "Welcome to hybook!"
       redirect_to @user
     else
+      flash[:error] = "saved failed."
       @title = "Sign up"
       render 'new'
     end
@@ -85,7 +86,7 @@ class UsersController < ApplicationController
   end
   
   def unlogged_in_user
-    flash[:error] = "You have signed up."
+    flash[:error] = signed_in? ? "You have signed up." : nil
     redirect_to(root_path) unless !signed_in?
   end
 end

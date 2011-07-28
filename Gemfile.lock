@@ -105,6 +105,9 @@ GEM
       activesupport (~> 3.0)
       railties (~> 3.0)
       rspec (~> 2.6.0)
+    salt-and-pepper (0.2.3)
+      activerecord (>= 3.0.4)
+      activesupport (>= 3.0.4)
     sass (3.1.4)
     sass-rails (3.1.0.rc.4)
       actionpack (~> 3.1.0.rc1)
@@ -143,6 +146,7 @@ DEPENDENCIES
   rails (= 3.1.0.rc4)
   rspec (= 2.6.0)
   rspec-rails (= 2.6.1)
+  salt-and-pepper
   sass-rails (~> 3.1.0.rc)
   sqlite3
   turn
