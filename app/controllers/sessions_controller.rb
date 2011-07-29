@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   
   def create
     user = User.authenticate(params[:session][:email] , params[:session][:password])
-    flash.now[:error] = user.password
+#    flash.now[:error] = user.password
     if user.nil?
       flash.now[:error] = "Invalid mail/password"
       @title = "Sign in"

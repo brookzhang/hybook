@@ -12,7 +12,7 @@
 require 'digest'
 
 class User < ActiveRecord::Base
-#  attr_accessor :password  # set this on ,then attr_accessible failed
+  attr_accessor :password  # set this on ,then attr_accessible failed
   attr_accessible :name ,:email,:password ,:password_confirmation
   
   has_many :microposts ,:dependent => :destroy
@@ -25,11 +25,9 @@ class User < ActiveRecord::Base
   
 #  validates :name ,:presence =>true ,:length=>{:maximum=>50}
   validates :email,:presence=>true,:format =>{:with=>email_regex} ,:uniqueness=>{:case_sensitive=>false}
-  validates :password,:presence=>true,:confirmation=>true,:length=>{:within=>6..40}, :if => :validate_password?
+  validates :password,:presence=>true,:confirmation=>true,:length=>{:within=>6..40} 
   
   
-  hash_column :password ,:length=>64 
-  hash_column :super_password ,:length=>80
 
   
 
@@ -40,11 +38,7 @@ class User < ActiveRecord::Base
     return user# if user.password == submitted_password
   end
   
-#  def self.authenticate_with_salt(id,cookie_salt)
-  def self.authenticate_with_salt(id)
-    user = find_by_id(id)
-    #(user && user.salt == cookie_salt) ? user : nil
-  end
+
   
   def feed
     Micropost.where("user_id=?",id)

@@ -10,12 +10,12 @@ salt                  varchar(50)
 active_code           varchar(50)          #active accout by email, 1=actived
 male                  boolean 
 description           nvarchar(500)
-reader_score          integer       comment+10,post+1
-maxfavorite           integer       default=10 ,消耗积分,增加额度
-maxbook               integer       最多可以創建的book數量,默認10,向admin申请增加
-admin                 boolean    administrators,
-maintainer            boolean    可添加非原著书,不受maxbook限制
-author                boolean 
+reader_score          integer     comment+10,post+1
+maxfavorite           integer     default=10 ,消耗积分,增加额度
+maxbook               integer     最多可以創建的book數量,默認10,向admin申请增加 (默认值直接写在user表里不好,以后改为全局设定,这里只保存超出的值)
+admin                 boolea      administrators,
+maintainer            boolean     可添加非原著书,不受maxbook限制
+author                boolean     可以同时是 admin ,maintainer,author.  author&maintainer使用同一后台,只是可以改作者名
 author_name           nvarchar(50)
 
 #[relationships] &&
