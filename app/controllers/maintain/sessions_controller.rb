@@ -1,5 +1,5 @@
-class SessionsController < ApplicationController
-  def new
+class Maintain::SessionsController < Maintain::BaseController
+  def show
     @title = 'Sign in'
     sign_out
   end
@@ -10,10 +10,10 @@ class SessionsController < ApplicationController
     if user.nil?
       flash.now[:error] = "Invalid mail/password"
       @title = "Sign in"
-      render 'new'
+      render 'show'
     else
       sign_in user
-      redirect_back_or user
+      redirect_back_or 'maintain/dashboard'
       #redirect_to user
     end
   end

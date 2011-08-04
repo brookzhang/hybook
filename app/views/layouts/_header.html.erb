@@ -13,7 +13,7 @@
 		      <%= link_to "浅吟低酌", root_path %>&nbsp;
 		      <%= link_to "排行榜", root_path %>&nbsp;
 		      <%if signed_in? %>
-		      <%=link_to "我的书房",current_user%>&nbsp;
+		      <%=link_to "我的书房",'maintain/dashboard'%>&nbsp;
 		      <%= link_to "退出", signout_path , :method =>:delete %>&nbsp;
 		      <%else %>
 		      <%=link_to "登录",signin_path %>&nbsp;

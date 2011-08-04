@@ -1,5 +1,20 @@
 Hybook::Application.routes.draw do
+  
+  namespace 'maintain' do
+    resource :session
+    match '/dashboard',:to=> 'dashboard#show'
+    resources :posts, :pages do
+      post 'preview', :on => :collection
+    end
+    resources :comments
+    resources :undo_items do
+      post 'undo', :on => :member
+    end
 
+    match 'health(/:action)' => 'health', :action => 'index', :as => :health
+
+    root :to => 'dashboard#show'
+  end
   
   get "pages/help"
 

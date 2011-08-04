@@ -6,7 +6,7 @@ class Maintain::BaseController < ApplicationController
   protected
 
   def require_login
-    return redirect_to(admin_session_path) unless session[:logged_in]
+    return redirect_to(maintain_session_path) unless session[:logged_in]
   end
 
   def set_content_type
