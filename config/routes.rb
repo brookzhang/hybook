@@ -1,11 +1,8 @@
 Hybook::Application.routes.draw do
   
   namespace 'maintain' do
-    resource :session
+    resource :session,:comments
     match '/dashboard',:to=> 'dashboard#show'
-    resources :posts, :pages do
-      post 'preview', :on => :collection
-    end
     resources :comments
     resources :undo_items do
       post 'undo', :on => :member
