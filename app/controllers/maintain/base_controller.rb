@@ -1,4 +1,5 @@
 class Maintain::BaseController < ApplicationController
+  include SessionsHelper
   layout 'maintain'
 
   before_filter :require_login
@@ -6,7 +7,7 @@ class Maintain::BaseController < ApplicationController
   protected
 
   def require_login
-    return redirect_to(maintain_session_path) unless session[:logged_in]
+    return redirect_to(maintain_session_path) unless signed_in?
   end
 
   def set_content_type
