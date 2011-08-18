@@ -4,6 +4,10 @@ Hybook::Application.routes.draw do
     resource :session,:comments
     match '/dashboard',:to=> 'dashboard#show'
     resources :comments
+    
+    resources :users
+    match '/myinfo',:to=>'users#show'
+    
     resources :undo_items do
       post 'undo', :on => :member
     end

@@ -22,18 +22,8 @@
           <div class="flash<%=key%>"><%=value%></div>
         <%end%>
 				
-				<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
-				  <TR>
-				    <TD width="169px" vAlign=top>
-				    	<%=render 'layouts/user_menu'%>
-						</td>
-				    <TD width="1px"></TD>
-				    <TD width="630px" vAlign=top>
-				    <%= yield %>
-				    </td>
-				  </tr>
-				</table>
-
+				<%= yield %>
+				
 				<%= render 'layouts/footer'%>
       
 				
