@@ -1,4 +1,4 @@
-class Maintain::SessionsController < Maintain::BaseController
+class SessionsController < ApplicationController
   def show
     @title = 'Sign in'
     sign_out

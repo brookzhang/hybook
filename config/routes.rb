@@ -2,7 +2,7 @@ Hybook::Application.routes.draw do
   
 
   namespace 'maintain' do
-    resource :session,:category
+    resource :session
     resources :comments,:categories,:users
     
     match '/dashboard',:to=> 'dashboard#show'
@@ -14,29 +14,24 @@ Hybook::Application.routes.draw do
     root :to => 'dashboard#show'
   end
   
-  get "pages/help"
 
   get "sessions/new"
-
   
   resources :sessions , :only =>[:new,:create,:destroy]
   resources :microposts,:only=>[:create,:destroy]
   resources :relationships, :only =>[:create , :destroy]
-  
+  resources :users
+  resource :user
 
   match '/toplist',:to=> 'pages#toplist'
   match '/about',:to=>'pages#about'
   match '/help',:to=>'pages#help'
   match '/signup',:to=>'users#new'
-  match '/signin',:to => 'sessions#new'
+  match '/signin',:to => 'sessions#show'
   match '/signout', :to=>'sessions#destroy'
   
   root :to=>'pages#home'
   
-  get "pages/home"
-
-  get "pages/toplist"
-  get "pages/about"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

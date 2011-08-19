@@ -6,6 +6,7 @@
 <table width="100%" cellSpacing=0 cellPadding=5  border=0 align=center >
 		<tr>
 			<td class="titlegray" align=center>
+          <%=categories_list%>
 		      <%= link_to "Home", root_path %>&nbsp;
 		      <%= link_to "class1", root_path %>&nbsp;
 		      <%= link_to "class1", root_path %>&nbsp;
@@ -13,7 +14,7 @@
 		      <%= link_to "class4", root_path %>&nbsp;
 		      <%= link_to "Toplist", root_path %>&nbsp;
 		      <%if signed_in? %>
-		      <%=link_to "myinfo",'maintain/dashboard'%>&nbsp;
+		      <%=link_to "myinfo",'/maintain/dashboard'%>&nbsp;
 		      <%= link_to "Logout", signout_path , :method =>:delete %>&nbsp;
 		      <%else %>
 		      <%=link_to "Login",signin_path %>&nbsp;

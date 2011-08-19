@@ -16,7 +16,7 @@ gem 'coffee-script'
 gem 'uglifier'
 
 gem 'jquery-rails'
- gem 'therubyracer'    #only for *nix
+# gem 'therubyracer'    #only for *nix
 
 # Use unicorn as the web server
 # gem 'unicorn'

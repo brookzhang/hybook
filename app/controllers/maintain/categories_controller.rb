@@ -10,8 +10,14 @@ class Maintain::CategoriesController < Maintain::BaseController
     @category = Category.find(params[:id])
   end
   
-  def save
-    
+  def update
+    @category = Category.find(params[:id])
+    if @category.update_attributes(params[:category])
+      #flash[:success] = "Updated successfully."
+      redirect_to :action => :index
+    else
+      render :action=>:edit
+    end
   end
   
   def new
