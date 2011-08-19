@@ -118,16 +118,17 @@ ActiveRecord::Schema.define(:version => 20110719062357) do
     t.string   "email"
     t.string   "name"
     t.string   "password"
-    t.string   "super_password"
+    t.string   "encrypted_password"
+    t.string   "salt"
     t.string   "active_code"
-    t.boolean  "male",           :default => true
+    t.boolean  "male",               :default => true
     t.string   "description"
     t.integer  "reader_score"
-    t.integer  "maxfavorite",    :default => 10
-    t.integer  "maxbook",        :default => 10
-    t.boolean  "admin",          :default => false
-    t.boolean  "maintainer",     :default => false
-    t.boolean  "author",         :default => false
+    t.string   "maxfavorite",        :default => "10"
+    t.integer  "maxbook",            :default => 10
+    t.boolean  "admin",              :default => false
+    t.boolean  "maintainer",         :default => false
+    t.boolean  "author",             :default => false
     t.string   "author_name"
     t.datetime "created_at"
     t.datetime "updated_at"
