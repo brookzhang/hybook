@@ -64,6 +64,11 @@ class User < ActiveRecord::Base
     !current_user.nil?
   end
   
+  def update_name(id,name)
+    
+  end
+  
+  
   private ################################################################################
 
   

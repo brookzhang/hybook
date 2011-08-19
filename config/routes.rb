@@ -1,19 +1,16 @@
 Hybook::Application.routes.draw do
   
+
   namespace 'maintain' do
-    resource :session,:comments
+    resource :session,:category
+    resources :comments,:categories,:users
+    
     match '/dashboard',:to=> 'dashboard#show'
-    resources :comments
-    
-    resources :users
     match '/myinfo',:to=>'users#show'
+    match '/myinfo/edit' , :to=>'users#edit'
+    match '/myinfo/update' , :to=>'users#update'
     
-    resources :undo_items do
-      post 'undo', :on => :member
-    end
-
-    match 'health(/:action)' => 'health', :action => 'index', :as => :health
-
+    
     root :to => 'dashboard#show'
   end
   
@@ -21,11 +18,7 @@ Hybook::Application.routes.draw do
 
   get "sessions/new"
 
-  resources :users do
-    member do
-      get :following , :followers
-    end
-  end
+  
   resources :sessions , :only =>[:new,:create,:destroy]
   resources :microposts,:only=>[:create,:destroy]
   resources :relationships, :only =>[:create , :destroy]

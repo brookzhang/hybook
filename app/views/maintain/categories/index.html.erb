@@ -1,0 +1,15 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="6">分类列表 </td></tr>
+  <tr style="font-weight:bold;">
+    <td>id</td>
+  	<td>title</td>
+    <td>description</td>
+    <td>sequence</td>
+    <td>show_on_header</td>
+    <td></td>
+  </tr>
+	<%=render @categories%>
+  <tr><td align="center" colspan="6"><%=link_to "Add",new_maintain_category_path%></td></tr>
+
+</table>
+<%=will_paginate%>
