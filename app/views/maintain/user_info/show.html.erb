@@ -1,0 +1,8 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="2">&nbsp;我的资料 </td></tr>
+  <tr><td align="right">姓名</td><td align="left"><%= @user.name %></td></tr>
+  <tr><td align="right">阅读积分</td><td align="left"><%= @user.reader_score %></td></tr>
+  <tr><td align="right">Email</td><td align="left"><%= @user.email %></td></tr>
+  <tr><td align="right">作者</td><td align="left"><%= @author %></td></tr>
+  <tr><td align="center" colspan="2"><%= button_to "修改",:action=> :edit %></td></tr>
+</table>

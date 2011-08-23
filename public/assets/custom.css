@@ -1,4 +1,4 @@
-/* 标题字色与内容底色d6c8ab-> fffffe   标题背景8f7d59->888888  内容背景cbbb8d=fffffd  bodybg  656c74=eeeeee*/
+/* gray */
 
 BODY {
   SCROLLBAR-ARROW-COLOR: #af9f7b; 
@@ -111,5 +111,15 @@ div.flasherror{
 
 .content_area_bg{
 	BACKGROUND: #fffffd
+}
+
+
+
+
+.current_navigation {
+  FONT-WEIGHT: bold;
+}
+.current_category {
+  FONT-WEIGHT: bold;;
 }
 

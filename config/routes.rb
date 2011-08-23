@@ -6,10 +6,12 @@ Hybook::Application.routes.draw do
     resources :comments,:categories,:users
     
     match '/dashboard',:to=> 'dashboard#show'
-    match '/myinfo',:to=>'users#show'
-    match '/myinfo/edit' , :to=>'users#edit'
-    match '/myinfo/update' , :to=>'users#update'
-    
+    match '/user_info',:to=> 'user_info#show'
+    match '/user_info/edit',:to=> 'user_info#edit'
+    match '/user_info/update',:to=> 'user_info#update'
+    match '/author_info',:to=> 'author_info#show'
+    match '/author_info/edit',:to=> 'author_info#edit'
+    match '/author_info/update',:to=> 'author_info#update'
     
     root :to => 'dashboard#show'
   end
@@ -20,7 +22,7 @@ Hybook::Application.routes.draw do
   resources :sessions , :only =>[:new,:create,:destroy]
   resources :microposts,:only=>[:create,:destroy]
   resources :relationships, :only =>[:create , :destroy]
-  resources :users
+  resources :users,:categories
   resource :user
 
   match '/toplist',:to=> 'pages#toplist'

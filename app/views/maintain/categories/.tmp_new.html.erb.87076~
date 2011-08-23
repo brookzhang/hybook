@@ -1,0 +1,4 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="2">新增分类 </td></tr>
+  <%=render 'form'%>
+</table>

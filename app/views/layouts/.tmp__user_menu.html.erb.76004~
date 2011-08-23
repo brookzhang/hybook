@@ -4,7 +4,7 @@
           </tr>
           <TR>
             <TD  vAlign=top class="LightContainerTD">
-              <%= link_to "我的资料", '/maintain/user_info' %><br>
+              <%= link_to "我的资料", '/maintain/myinfo' %><br>
               <%= link_to "收藏列表", '#' %><br>
               <%= link_to "评论列表", '#' %><br>
               <div class="BottomBorderlineDiv"></div><br>
@@ -18,7 +18,7 @@
           </tr>
           <TR>
             <TD  vAlign=top class="LightContainerTD">
-              <%= link_to "作者信息", '/maintain/author_info' %><br>
+              <%= link_to "作者信息", '#' %><br>
               <%= link_to "作品列表", '#' %><br>
               <%= link_to "评论列表", '#' %><br>
               <div class="BottomBorderlineDiv"></div>

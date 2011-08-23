@@ -1,6 +1,5 @@
 <tr>
     <td><%=category.id%></td>
-    <td><%=category.parent_id%></td>
     <td><%=category.title%></td>
     <td><%=category.description%></td>
     <td><%=category.sequence%></td>

@@ -1,0 +1,114 @@
+
+BODY {
+  SCROLLBAR-ARROW-COLOR: #af9f7b; 
+	SCROLLBAR-FACE-COLOR: #e6dbc6; 
+	LINE-HEIGHT: 18px; 
+	MARGIN-TOP: 0px; 
+	SCROLLBAR-BASE-COLOR: #e6dbc6; 
+	MARGIN-BOTTOM: 0px; 
+	BACKGROUND: #656c74; 
+	SCROLLBAR-HIGHLIGHT-COLOR: #af9f7b; 
+	COLOR: #75654a; 
+	SCROLLBAR-SHADOW-COLOR: #af9f7b; 
+	FONT-SIZE: 12px; 
+	SCROLLBAR-dark-shadow-color: #E6DBC6;
+}
+TABLE.tableThinBorder {
+  BORDER-RIGHT-WIDTH: 0px; WIDTH: 100%; BACKGROUND: #8f7d59; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+TABLE.PartListTable {
+  BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; BORDER-SPACING: 1px; WIDTH: 100%; PADDING-RIGHT: 1px; BACKGROUND: #8f7d59; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 1px
+}
+A:visited {
+  LINE-HEIGHT: 18px; COLOR: #75654a; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:link {
+  LINE-HEIGHT: 18px; COLOR: #75654a; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A:hover {
+  LINE-HEIGHT: 18px; COLOR: #8b4513; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+A.LightLinkInDarkTh:visited {
+  LINE-HEIGHT: 18px; COLOR: #d6c8ab; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.LightLinkInDarkTh:link {
+  LINE-HEIGHT: 18px; COLOR: #d6c8ab; FONT-SIZE: 12px; TEXT-DECORATION: none
+}
+A.LightLinkInDarkTh:hover {
+  LINE-HEIGHT: 18px; COLOR: #f0e68c; FONT-SIZE: 12px; TEXT-DECORATION: underline
+}
+A.TopMenuLink:visited {
+  LINE-HEIGHT: 18px; COLOR: #75654a; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.TopMenuLink:link {
+  LINE-HEIGHT: 18px; COLOR: #75654a; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.TopMenuLink:hover {
+  LINE-HEIGHT: 18px; COLOR: #8b4513; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+A.BookNamePartList:visited {
+  LINE-HEIGHT: 22px; COLOR: #75654a; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.BookNamePartList:link {
+  LINE-HEIGHT: 22px; COLOR: #75654a; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+A.BookNamePartList:hover {
+  LINE-HEIGHT: 22px; COLOR: #8b4513; FONT-SIZE: 14px; FONT-WEIGHT: bold; TEXT-DECORATION: underline
+}
+.tableBorder {
+  BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #d6c8ab; PADDING-LEFT: 2px; BORDER-SPACING: 1px; WIDTH: 100%; PADDING-RIGHT: 2px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 2px
+}
+.tableInBorder {
+  BORDER-BOTTOM: 0px; BORDER-LEFT: 0px; PADDING-BOTTOM: 2px; BACKGROUND-COLOR: #d6c8ab; PADDING-LEFT: 2px; BORDER-SPACING: 1px; WIDTH: 100%; PADDING-RIGHT: 2px; BORDER-TOP: 0px; BORDER-RIGHT: 0px; PADDING-TOP: 2px
+}
+TD.tdbg {
+  BACKGROUND: #d6c8ab
+}
+TD.thbg {
+  BACKGROUND: #d6c8ab; FONT-SIZE: 13px; FONT-WEIGHT: bold
+}
+TD {
+  LINE-HEIGHT: 18px; COLOR: #75654a; FONT-SIZE: 12px
+}
+TD.copyright {
+  PADDING-BOTTOM: 1px; PADDING-LEFT: 1px; PADDING-RIGHT: 1px; FONT: 11px verdana,arial,helvetica,sans-serif; COLOR: #75654a; BORDER-TOP: #75654a 1px dashed; TEXT-DECORATION: none; PADDING-TOP: 1px
+}
+TD.BookIndexAbout {
+  BORDER-BOTTOM: #8f7d59 1px solid; TEXT-ALIGN: center; WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-TOP: #8f7d59 double
+}
+.DarkTh {
+  PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BACKGROUND: #8f7d59; COLOR: #d6c8ab; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 4px
+}
+.LightContainerTD {
+  BORDER-BOTTOM: #8f7d59 1px solid; BORDER-LEFT: #8f7d59 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 18px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BACKGROUND: #d6c8ab; COLOR: #8f7d59; FONT-SIZE: 12px; BORDER-TOP: #8f7d59 1px solid; BORDER-RIGHT: #8f7d59 1px solid; PADDING-TOP: 10px
+}
+.BottomBorderlineDiv {
+  MARGIN-TOP: 10px; BORDER-TOP: #8f7d59 1px solid
+}
+.BottomBorderlineTD {
+  LINE-HEIGHT: 3px; BORDER-TOP: #8f7d59 1px solid
+}
+.BookIndexName {
+  PADDING-BOTTOM: 3px; FONT-FAMILY: ????; FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+TD.BookIndexAbout {
+  BORDER-BOTTOM: #799ae1 1px solid; TEXT-ALIGN: center; WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-TOP: #799ae1 double
+}
+
+.debug_dump{
+	color:#000000;
+}
+
+.bodyleft{
+	background-image:url(images/bgleft.gif);
+	background-repeat:repeat-y;
+}
+
+div.flasherror{
+	color:#ff0000;
+}
+
+.content_area_bg{
+	BACKGROUND: #cbbb8d
+}
+

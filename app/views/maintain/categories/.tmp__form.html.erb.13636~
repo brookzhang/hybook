@@ -1,5 +1,4 @@
 <%=form_for [:maintain,@category] do |f| %>
-  <tr><td align="right">parent_id</td><td align="left"><%=f.text_field :parent_id %></td></tr>
   <tr><td align="right">title</td><td align="left"><%=f.text_field :title %></td></tr>
   <tr><td align="right">description</td><td align="left"><%=f.text_field :description %></td></tr>
   <tr><td align="right">sequence</td><td align="left"><%=f.text_field :sequence %></td></tr>

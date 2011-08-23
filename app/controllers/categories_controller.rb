@@ -3,12 +3,10 @@ class CategoriesController < ApplicationController
     @categories = Category.paginate(:page=>params[:page])
   end
 
-  def header_menu
-    @categories = Category.where(:show_on_header=> true).all
-    @link_list =''
-    @categories.each do |c|
-      @link_list += link_to(c.title,c_path) + ' '
-    end
+  def show
+    @category = Category.find(params[:id])
+    @parent_category = Category.find(@category.parent_id>0 ? @category.parent_id : params[:id])
+    @groups =  Category.where([" parent_id = ?",@parent_category.id]).all()
   end
-  
+
 end

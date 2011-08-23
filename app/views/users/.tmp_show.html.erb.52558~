@@ -1,0 +1,30 @@
+<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
+  <TR>
+    <TD width="169px" vAlign=top><%=render 'menu'%></td>
+    <TD width="1px"></TD>
+    <TD width="630px" vAlign=top>
+    <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
+      <TR><TD class="DarkTh"  vAlign=top>&nbsp;我的资料 </td></tr>
+      <TR><TD class="LightContainerTD" vAlign=top >
+	        <%= gravatar_for @user %> <%= @user.name %>
+	        <br />
+	        <%=render 'follow_form' if signed_in?%>
+	        <% unless @user.microposts.empty? %>
+		        <table class="microposts" summary="User microposts">
+		          <%= render @microposts %>
+		        </table>
+		        <%= will_paginate @microposts %>
+	        <% end %>
+	        <br><br>
+	        <strong>Name</strong> <%= @user.name %><br />
+          <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
+          <strong>Microposts</strong> <%= @user.microposts.count %>
+          <%=render 'shared/stats'%>
+        </td>
+      </tr>
+    </table>
+    </td>
+  </tr>
+</table>
+
+
