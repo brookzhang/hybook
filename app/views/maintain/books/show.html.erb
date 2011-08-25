@@ -1,8 +1,11 @@
-<h1>Editing post - <%= link_to(@post.title, post_path(@post)) %></h1>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="7"><%=@book.title%> </td></tr>
+  <tr style="font-weight:bold;">
+    <td>id</td>
+    <td>名称</td>
+    <td>总点击</td>
+    <td></td>
+  </tr>
+  <tr><td align="center" colspan="7"><%=link_to "Edit",edit_maintain_book_path%></td></tr>
 
-<%= semantic_form_for([:admin, @post]) do |form| -%>
-  <%= render :partial => 'form', :locals => {:form => form} %>
-  <%= form.buttons do -%>
-    <%= form.commit_button("Save") -%>
-  <% end -%>
-<% end -%>
+</table>

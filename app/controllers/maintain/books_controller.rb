@@ -1,11 +1,11 @@
 class Maintain::BooksController < Maintain::BaseController
-  before_filter :find_book, :only => [:show, :update, :destroy]
+#  before_filter :find_book, :only => [:show, :update, :destroy]
 
   def index
     respond_to do |format|
       format.html {
         @books = Book.paginate(
-          :order => "published_at DESC",
+          :order => " id DESC",
           :page  => params[:page]
         )
       }
@@ -34,8 +34,13 @@ class Maintain::BooksController < Maintain::BaseController
     end
     end
   end
+  
+  def edit
+    @book = Book.find(params[:id])
+  end
 
   def update
+    @book = Book.find(params[:id])
     if @book.update_attributes(params[:book])
       respond_to do |format|
         format.html {
@@ -51,11 +56,7 @@ class Maintain::BooksController < Maintain::BaseController
   end
 
   def show
-    respond_to do |format|
-      format.html {
-        render :partial => 'book', :locals => {:book => @book} if request.xhr?
-      }
-    end
+    @book = Book.find(params[:id])
   end
 
   def new

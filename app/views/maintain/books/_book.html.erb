@@ -1,12 +1,6 @@
-<tr class="<%= cycle('', 'alt') %>">
-  <td><%= book.published_at.strftime('%d %b, %Y') %></td>
-  <td><%= link_to (book.title == '' ? '[Untitled]' : truncate(book.title, :length => 30)), admin_book_path(book) %></td>
-  <td><% tmpc = truncate(book.body, :length => 55) %><%= (tmpc != '' ? tmpc : '&nbsp;') %></td>
-  <td><%= book.approved_comments.size %></td>
-  <td>
-    <%= link_to(image_tag('silk/pencil.png', :alt => 'edit'), admin_book_path(book)) %>
-    <%= form_for(book, :as => :book, :url => admin_book_path(book), :html => {:class => 'delete-item', :method => :delete}) do |form| -%>
-      <%= image_submit_tag("silk/delete.png", :alt => 'Delete Comment') %>
-    <% end -%>
-  </td>
+<tr>
+    <td><%=book.id%></td>
+    <td><%=book.title%></td>
+    <td><%=book.all_click%></td>
+    <td><%=link_to 'edit',edit_maintain_book_path(book)%></td>
 </tr>

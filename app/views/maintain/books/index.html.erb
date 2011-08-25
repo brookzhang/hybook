@@ -1,34 +1,13 @@
-<% content_for(:head) do -%>
-  <%= javascript_include_tag('maintain/books.js') %>
-<% end -%>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="7">作品列表 </td></tr>
+  <tr style="font-weight:bold;">
+    <td>id</td>
+    <td>名称</td>
+    <td>总点击</td>
+    <td></td>
+  </tr>
+  <%=render @books%>
+  <tr><td align="center" colspan="7"><%=link_to "Add",new_maintain_book_path%></td></tr>
 
-<h1>Your books</h1>
-<table>
-  <thead>
-    <tr>
-      <th>Published At</th>
-      <th>Title</th>
-      <th>Excerpt</th>
-      <th>Comments</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% if @books.empty? -%>
-      <tr><td colspan="5">There are no books at this time.</td></tr>
-    <% else -%>
-      <%= render :partial => 'book', :collection => @books %>
-    <% end -%>
-  </tbody>
-
-  <tfoot>
-    <% if @books.total_pages > 1 -%>
-      <tr class="pagination">
-        <td colspan="5">
-          <%= will_paginate(@books, :previous_label => '« Newer', :next_label => 'Older »') %>
-        </td>
-      </tr>
-    <% end -%>
-  </tfoot>
 </table>
+<%=will_paginate%>
