@@ -1,11 +1,6 @@
 <TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
-  <TR><TD class="DarkTh"  vAlign=top colspan="7"><%=@book.title%> </td></tr>
-  <tr style="font-weight:bold;">
-    <td>id</td>
-    <td>名称</td>
-    <td>总点击</td>
-    <td></td>
-  </tr>
+  <TR><TD class="DarkTh"  vAlign=top colspan="7"><%=@book.title%> <%=link_to "Edit",edit_maintain_book_path%></td></tr>
+  <tr style="font-weight:bold;"><td>总点击:<%=@book.all_click%></td></tr>
   <tr><td align="center" colspan="7"><%=link_to "Edit",edit_maintain_book_path%></td></tr>
 
 </table>
