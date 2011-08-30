@@ -1,16 +1,16 @@
 <TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
   <TR><TD class="DarkTh"  vAlign=top colspan="7">分类列表 </td></tr>
   <tr style="font-weight:bold;">
-    <td>id</td>
-    <td>父类</td>
-  	<td>名称</td>
-    <td>简介</td>
-    <td>排序</td>
-    <td>公开</td>
-    <td></td>
+    <td class="LightContainerTD">id</td>
+    <td class="LightContainerTD">父类</td>
+  	<td class="LightContainerTD">名称</td>
+    <td class="LightContainerTD">简介</td>
+    <td class="LightContainerTD">排序</td>
+    <td class="LightContainerTD">公开</td>
+    <td class="LightContainerTD"></td>
   </tr>
 	<%=render @categories%>
-  <tr><td align="center" colspan="7"><%=link_to "Add",new_maintain_category_path%></td></tr>
+  <tr><td align="center" colspan="7" class="forumRow"><%=link_to "Add",new_maintain_category_path%></td></tr>
 
 </table>
 <%=will_paginate%>

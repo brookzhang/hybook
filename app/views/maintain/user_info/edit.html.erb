@@ -1,7 +1,7 @@
 <TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
-  <TR><TD class="DarkTh"  vAlign=top colspan="2">修改资料 </td></tr>
+  <TR><TD class="DarkTh"  vAlign=top colspan="2">modify </td></tr>
   <%=form_for @user ,:url => { :action => :update } do |f| %>
-  <tr><td align="right">姓名</td><td align="left"><%=f.text_field :name %></td></tr>
+  <tr><td align="right">name</td><td align="left"><%=f.text_field :name %></td></tr>
   <tr><td align="center" colspan="2"><%=f.submit "submit"%></td></tr>
   <%end%>
 </table>
