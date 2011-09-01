@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110719062357) do
+ActiveRecord::Schema.define(:version => 20110901081212) do
 
   create_table "books", :force => true do |t|
     t.integer  "category_id"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20110719062357) do
     t.boolean  "public",     :default => true
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "book_id"
   end
 
   add_index "chapters", ["section_id"], :name => "index_chapters_on_section_id"

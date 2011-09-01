@@ -1,0 +1,2 @@
+module Maintain::ChaptersHelper
+end

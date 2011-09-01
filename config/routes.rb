@@ -1,9 +1,13 @@
 Hybook::Application.routes.draw do
   
 
+
   namespace 'maintain' do
     resource :session
     resources :comments,:categories,:users,:books
+    resources :books do
+      resources :chapters
+    end
     
     match '/dashboard',:to=> 'dashboard#show'
     match '/user_info',:to=> 'user_info#show'

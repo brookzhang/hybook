@@ -1,0 +1,11 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="DarkTh"  vAlign=top colspan="7"><%=@book.title%> </td></tr>
+  <tr style="font-weight:bold;">
+    <td>id</td>
+    <td>title</td>
+    <td>public</td>
+  </tr>
+  <%=render @chapters%>
+  <tr><td align="center" colspan="7"><%=link_to "Add",new_maintain_book_chapter_path(@book)%></td></tr>
+
+</table>
