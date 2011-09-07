@@ -1,7 +1,6 @@
 Hybook::Application.routes.draw do
   
 
-
   namespace 'maintain' do
     resource :session
     resources :comments,:categories,:users,:books
@@ -26,8 +25,11 @@ Hybook::Application.routes.draw do
   resources :sessions , :only =>[:new,:create,:destroy]
   resources :microposts,:only=>[:create,:destroy]
   resources :relationships, :only =>[:create , :destroy]
-  resources :users,:categories
+  resources :users,:categories 
   resource :user
+  resources :books do
+    resources :chapters
+  end
 
   match '/toplist',:to=> 'pages#toplist'
   match '/about',:to=>'pages#about'
