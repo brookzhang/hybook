@@ -9,11 +9,11 @@
 	<body>
   <center>
 	<!-- Book: 頁面head -->
-	<TABLE  cellSpacing=0 cellPadding=0  border=0 width=100% >
+	<TABLE  cellSpacing=0 cellPadding=0  border=0 >
 	  <tr>
-	    <td class="TdLeftSide" ></td><!--左侧空白-->
+	    <td width=67 class="bodyleft" ></td><!--左侧空白-->
 	    <!--中间内容-->
-	    <td  width=100% >
+	    <td width=800 >
 	    	
 	      
 				<%= render 'layouts/header'%>
@@ -22,13 +22,13 @@
           <div class="flash<%=key%>"><%=value%></div>
         <%end%>
 				
-				<TABLE cellSpacing=0 cellPadding=0  width=100% border=1>
+				<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
 				  <TR>
-				    <TD class="TdLeftMenuFrame" vAlign=top>
+				    <TD width="169px" vAlign=top>
 				    	<%=render 'layouts/user_menu'%>
 						</td>
 				    <TD width="1px"></TD>
-				    <TD class="TdRightContentFrame" vAlign=top>
+				    <TD width="630px" vAlign=top>
 				    <%= yield %>
 				    </td>
 				  </tr>
@@ -39,7 +39,7 @@
 				
 				
 			</td>
-      <td class="TdRightSide"></td><!--右侧空白-->
+      <td width=67 style="BACKGROUND: url(images/bgright.gif) repeat-y center top; "></td><!--右侧空白-->
 	  </tr>
 	</table>
 	<div><%= debug(params) if Rails.env.development? %></div>

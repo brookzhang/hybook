@@ -1,13 +1,13 @@
 <TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
-  <TR><TD class="DarkTh"  vAlign=top colspan="7">分类列表 </td></tr>
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">分类列表 </td></tr>
   <tr style="font-weight:bold;">
-    <td class="LightContainerTD">id</td>
-    <td class="LightContainerTD">父类</td>
-  	<td class="LightContainerTD">名称</td>
-    <td class="LightContainerTD">简介</td>
-    <td class="LightContainerTD">排序</td>
-    <td class="LightContainerTD">公开</td>
-    <td class="LightContainerTD"></td>
+    <td class="TdLightContainer">id</td>
+    <td class="TdLightContainer">父类</td>
+  	<td class="TdLightContainer">名称</td>
+    <td class="TdLightContainer">简介</td>
+    <td class="TdLightContainer">排序</td>
+    <td class="TdLightContainer">公开</td>
+    <td class="TdLightContainer"></td>
   </tr>
 	<%=render @categories%>
   <tr><td align="center" colspan="7" class="forumRow"><%=link_to "Add",new_maintain_category_path%></td></tr>

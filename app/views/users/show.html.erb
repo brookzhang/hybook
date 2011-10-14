@@ -4,8 +4,8 @@
     <TD width="1px"></TD>
     <TD width="630px" vAlign=top>
     <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
-      <TR><TD class="DarkTh"  vAlign=top>&nbsp;我的资料 </td></tr>
-      <TR><TD class="LightContainerTD" vAlign=top >
+      <TR><TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;我的资料 </td></tr>
+      <TR><TD class="TdLightContainer" vAlign=top >
 	        <%= gravatar_for @user %> <%= @user.name %>
 	        <br />
 	        <%=render 'follow_form' if signed_in?%>

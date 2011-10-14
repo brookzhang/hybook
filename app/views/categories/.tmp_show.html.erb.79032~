@@ -3,22 +3,22 @@
     <TD width="169px" vAlign=top>
         <TABLE cellSpacing=0 cellPadding=0 width="100%"  bgcolor="#8f7d59" >
           <TR>
-            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Category</td>
+            <TD class="DarkTh" vAlign=top>&nbsp;categories</td>
           </tr>
           <TR>
-            <TD  vAlign=top class="TdLightContainer">
-               group.IndexList_Class(2) 
-            <div class="DivBottomBorderline"></div>
+            <TD  vAlign=top class="LightContainerTD">
+               <%=render 'groups'%>
+            <div class="BottomBorderlineDiv"></div>
             <br>
             </td>
           </tr>
           <TR>
-            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Description</td>
+            <TD class="DarkTh" vAlign=top>&nbsp;toplist</td>
           </tr>
           <TR>
-            <TD  vAlign=top class="TdLightContainer">
+            <TD  vAlign=top class="LightContainerTD">
               group.Description
-            <div class="DivBottomBorderline"></div>
+            <div class="BottomBorderlineDiv"></div>
             <br>
             </td>
           </tr>
@@ -31,11 +31,12 @@
         
         <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
           <TR>
-            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;<%=@book.title%> </td>
+            <TD class="DarkTh"  vAlign=top>&nbsp;<%=@category.title%> last update </td>
           </tr>
           <TR>
-            <TD class="TdLightContainer" vAlign=top >
-            <%=render @chapters%>
+            <TD class="LightContainerTD" vAlign=top >
+            group.ListNewChapter(15)
+          new review
             </td>
           </tr>
             

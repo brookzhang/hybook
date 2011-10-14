@@ -1,24 +1,24 @@
-<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
+<TABLE cellSpacing=0 cellPadding=0  class="TableContentBlock">
   <TR>
-    <TD width="169px" vAlign=top>
-        <TABLE cellSpacing=0 cellPadding=0 width="100%"  bgcolor="#8f7d59" >
+    <TD class="TdLeftMenuFrame" vAlign=top>
+        <TABLE cellSpacing=0 cellPadding=3 width="100%" >
           <TR>
-            <TD class="DarkTh" vAlign=top>&nbsp;Category</td>
+            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Category</td>
           </tr>
           <TR>
-            <TD  vAlign=top class="LightContainerTD">
+            <TD  vAlign=top class="TdWhiteContainer">
                group.IndexList_Class(2) 
-            <div class="BottomBorderlineDiv"></div>
+            <div class="DivBottomBorderline"></div>
             <br>
             </td>
           </tr>
           <TR>
-            <TD class="DarkTh" vAlign=top>&nbsp;Description</td>
+            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Description</td>
           </tr>
           <TR>
-            <TD  vAlign=top class="LightContainerTD">
+            <TD  vAlign=top class="TdWhiteContainer">
               group.Description
-            <div class="BottomBorderlineDiv"></div>
+            <div class="DivBottomBorderline"></div>
             <br>
             </td>
           </tr>
@@ -27,15 +27,17 @@
       
       <TD width="1px"></TD>
       
-      <TD width="630px" vAlign=top>
+      <TD   class="TdRightContentFrame" vAlign=top>
         
-        <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
+        <TABLE  cellSpacing=0 cellPadding=0 width="100%" border=0>
           <TR>
-            <TD class="DarkTh"  vAlign=top>&nbsp;Last updates </td>
+            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;Last updates </td>
           </tr>
           <TR>
-            <TD class="LightContainerTD" vAlign=top >
-            <%= render @chapters%>
+            <TD class="TdWhiteContainer" vAlign=top >
+            	<table  cellSpacing=0 cellPadding=0  width="100%">
+              <%= render @chapters%>
+						  </table>
             </td>
           </tr>
             

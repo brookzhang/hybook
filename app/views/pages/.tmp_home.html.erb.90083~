@@ -1,19 +1,19 @@
-<TABLE cellSpacing=0 cellPadding=0 class="TableContentBlock">
+<TABLE cellSpacing=0 cellPadding=0  class="TableCotentBlock">
   <TR>
-    <TD class="TdLeftMenuFrame" vAlign=top>
-        <TABLE cellSpacing=0 cellPadding=0 width="100%" >
+    <TD width="169px" vAlign=top>
+        <TABLE cellSpacing=0 cellPadding=3 width="100%" >
           <TR>
-            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;categories</td>
+            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Category</td>
           </tr>
           <TR>
             <TD  vAlign=top class="TdWhiteContainer">
-               <%=render 'groups'%>
+               group.IndexList_Class(2) 
             <div class="DivBottomBorderline"></div>
             <br>
             </td>
           </tr>
           <TR>
-            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;toplist</td>
+            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;Description</td>
           </tr>
           <TR>
             <TD  vAlign=top class="TdWhiteContainer">
@@ -27,16 +27,15 @@
       
       <TD width="1px"></TD>
       
-      <TD class="TdRightContentFrame" vAlign=top>
+      <TD width="630px" vAlign=top>
         
-        <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
+        <TABLE cellSpacing=0 cellPadding=3 width="100%"  >
           <TR>
-            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;<%=@category.title%> last update </td>
+            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;Last updates </td>
           </tr>
           <TR>
             <TD class="TdWhiteContainer" vAlign=top >
-            group.ListNewChapter(15)
-          new review
+            <%= render @chapters%>
             </td>
           </tr>
             

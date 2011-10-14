@@ -1,6 +1,6 @@
 <TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
-  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">[<%=link_to(@book.title,maintain_book_chapters_path,:class=>"TitleInDarkBlue")%>]</td></tr>
-  <tr><td class="TdLightBlueContainer"><%=@chapter.title%> </td></tr>
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">[<%=link_to @book.title,maintain_book_chapters_path%>]</td></tr>
+  <tr><td class="TdLightContainer"><%=@chapter.title%> </td></tr>
 	<tr><td align="left"><%=raw simple_format h(@chapter.content.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  </td></tr>
   <tr><td align="center" colspan="7">[<%=link_to "Edit",edit_maintain_book_chapter_path%>]</td></tr>
 
