@@ -1,2 +1,10 @@
-<h1>Chapters#show</h1>
-<p>Find me in app/views/chapters/show.html.erb</p>
+<TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">
+  	[<%=link_to(@book.title,book_chapters_path,:class=>"TitleInDarkBlue")%>]
+		
+		</td></tr>
+  <tr><td class="TdLightBlueContainer" align="center"><%=@chapter.title%> </td></tr>
+  <tr><td align="left"><%=raw simple_format h(@chapter.content.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  </td></tr>
+  <tr><td align="center" colspan="7"><  ></td></tr>
+
+</table>

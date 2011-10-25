@@ -1,8 +1,0 @@
-<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
-  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="2">&nbsp;my profile </td></tr>
-  <tr><td align="right">name</td><td align="left"><%= @user.name %></td></tr>
-  <tr><td align="right">reader_score</td><td align="left"><%= @user.reader_score %></td></tr>
-  <tr><td align="right">Email</td><td align="left"><%= @user.email %></td></tr>
-  <tr><td align="right">author</td><td align="left"><%= @author %></td></tr>
-  <tr><td align="center" colspan="2"><%= button_to "修改",:action=> :edit %></td></tr>
-</table>

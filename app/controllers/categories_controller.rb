@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = Category.paginate(:page=>params[:page])
+    @categories = Category.all()
   end
 
   def show
@@ -9,4 +9,7 @@ class CategoriesController < ApplicationController
     @groups =  Category.where([" parent_id = ?",@parent_category.id]).all()
   end
 
+  def top_list
+    @categories = Category.all()
+  end
 end

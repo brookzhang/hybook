@@ -14,7 +14,7 @@ module ApplicationHelper
   
   def navigation_bar
     link = [link_to('Home',root_path,:class=>"deepblue")]
-    link << link_to('Toplist' ,:categories,:class=>"deepblue")
+    link << link_to('Toplist' ,'/toplist',:class=>"deepblue")
     @categories = Category.where([" (parent_id=0 or parent_id is null) and show_on_header = ? ",true]).all()
     #@categories = Category.all()
     @categories.each do |cat|

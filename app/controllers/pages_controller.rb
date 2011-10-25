@@ -10,6 +10,7 @@ class PagesController < ApplicationController
 
   def toplist
     @title = "Toplist"
+    @categories = Category.all()
   end
 
   def about

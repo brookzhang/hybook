@@ -1,3 +1,0 @@
-<tr>
-    <td align="left">[<%=chapter.created_at%>] <%= link_to chapter.title,book_chapter_path(chapter.book_id,chapter.id)%></td>
-</tr>
