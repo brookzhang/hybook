@@ -193,7 +193,19 @@ $ git checkout master / git checkout -b new-branch      #make a new branch, and 
 
 
 # ============================github:============================
-$ git remote add origin git@github.com:brookzhang/first_app.git
+Global setup:
+ Set up git
+  git config --global user.name "Brook"
+  git config --global user.email brook_realize@126.com
+      
+Next steps:
+  git init
+  git add .
+  git commit -m 'first commit'
+  git remote add origin https://brookzhang@github.com/brookzhang/hybook.git
+  git push -u origin master
+  
+$ git remote add origin https://brookzhang@github.com/brookzhang/fat_free_crm.git
 $ git push origin master
 $ git push origin master:master
 $ git push
