@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -26,8 +27,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.integer  "week_click",        :default => 0
     t.integer  "day_click",         :default => 0
     t.datetime "last_click_at"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                           :null => false
+    t.datetime "updated_at",                           :null => false
   end
 
   add_index "books", ["category_id"], :name => "index_books_on_category_id"
@@ -39,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.string   "description"
     t.boolean  "show_on_header", :default => false
     t.integer  "sequence"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "chapters", :force => true do |t|
@@ -49,8 +50,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.string   "title"
     t.string   "content"
     t.boolean  "public",     :default => true
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                   :null => false
+    t.datetime "updated_at",                   :null => false
     t.integer  "book_id"
   end
 
@@ -64,8 +65,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.integer  "all_click",          :default => 0
     t.integer  "status"
     t.boolean  "submit_to_homepage"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   add_index "comments", ["book_id"], :name => "index_comments_on_book_id"
@@ -75,8 +76,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.string   "code"
     t.string   "category"
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   create_table "microposts", :force => true do |t|
@@ -85,8 +86,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.integer  "forked_id"
     t.integer  "user_id"
     t.string   "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "microposts", ["book_id"], :name => "index_microposts_on_book_id"
@@ -97,8 +98,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
     t.integer  "followed_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
@@ -109,8 +110,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.string   "title"
     t.string   "description"
     t.integer  "sequence"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
   end
 
   add_index "sections", ["book_id"], :name => "index_sections_on_book_id"
@@ -130,8 +131,8 @@ ActiveRecord::Schema.define(:version => 20110901081212) do
     t.boolean  "maintainer",     :default => false
     t.boolean  "author",         :default => false
     t.string   "author_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
 end

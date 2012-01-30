@@ -8,6 +8,7 @@ class Maintain::CategoriesController < Maintain::BaseController
 
   def edit
     @category = Category.find(params[:id])
+    @parents = Category.where(:parent_id=> 0 ).order("sequence asc").collect { |item| [item.title,item.id] }.insert(0, ['--root--',0]) 
   end
   
   def update
@@ -22,6 +23,8 @@ class Maintain::CategoriesController < Maintain::BaseController
   
   def new
     @category = Category.new
+    #@parents = Category.where(:parent_id=> 0 ).order("sequence asc")
+    @parents = Category.where(:parent_id=> 0 ).order("sequence asc").collect { |item| [item.title,item.id] }.insert(0, ['--root--',0])  
   end
 
   def create

@@ -1,0 +1,12 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">分卷</td></tr>
+  <tr style="font-weight:bold;">
+    <td width="20">seq</td>
+    <td width="200">卷名</td>
+    <td>概要</td>
+    <td> </td>
+  </tr>
+  <%=render @sections%>
+  <tr><td align="center" colspan="7"><%=link_to "Add",new_maintain_book_section_path%></td></tr>
+
+</table>

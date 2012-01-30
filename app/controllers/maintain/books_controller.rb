@@ -57,10 +57,12 @@ class Maintain::BooksController < Maintain::BaseController
 
   def show
     @book = Book.find(params[:id])
+    @sections = Section.where("book_id = ?",@book.id)
   end
 
   def new
     @book = Book.new
+    @catetories = Category.where(" parent_id > 0"  ).order("sequence asc").collect { |item| [item.parent.title + ' -> ' +item.title,item.id] }
   end
 
   def preview
@@ -90,10 +92,23 @@ class Maintain::BooksController < Maintain::BaseController
       }
     end
   end
+  
+  
+  
+  
+  def add_section
+    
+  end
+
+
 
   protected
 
   def find_post
     @book = Book.find(params[:id])
   end
+  
+  
+  
+  
 end

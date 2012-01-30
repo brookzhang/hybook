@@ -1,4 +1,44 @@
 set HTTP_PROXY=http://172.30.4.63:3128
+
+rails new novelpool
+git init
+git add .
+git commit -am "init"
+# github.com create new repotery
+git remote add origin https://brookzhang@github.com/brookzhang/novelpool.git
+git push -u origin master
+
+
+rails g migration initdatabase
+rake db:migrate
+rails g controller Pages
+rails destroy controller Pages
+rails g controller Pages home toplist about help
+# edit routes
+
+git config branch.master.remote origin
+git config branch.master.merge refs/heads/master
+
+git branch -m master development 
+git branch -m published master 
+git push origin master 
+
+#insert test data
+rails g model User
+rails c
+user = User.new
+user.email="brook@brook.com"
+......
+user.save
+reload! #when model class modified ,reload them in console
+
+rails g migration AlterAuthorOfBook
+rails g controller maintain/Sections index show new edit
+rake routes  # show all routes
+
+
+
+
 #========================================================== user from 20110714 to 20110914
 #[users] &&
 id

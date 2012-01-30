@@ -1,6 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
  
-gem 'rails', '3.2.0.rc1'
+gem 'rails', '3.2.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
@@ -11,7 +11,7 @@ gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch
 #gem 'will_paginate','2.3.15'
 
 # Asset template engines
-gem 'sass-rails', "~> 3.1.0.rc"
+gem 'sass-rails', "~> 3.2.4"
 gem 'coffee-script'
 gem 'uglifier'
 
