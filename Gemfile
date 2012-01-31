@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://ruby.taobao.org'
  
 gem 'rails', '3.2.0'
 
@@ -7,7 +7,7 @@ gem 'rails', '3.2.0'
 
 gem 'sqlite3'
 gem 'gravatar_image_tag','1.0.0'
-gem "will_paginate", :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
+gem "will_paginate" #, :git => "https://github.com/p7r/will_paginate.git", :branch => "rails3"
 #gem 'will_paginate','2.3.15'
 
 # Asset template engines

@@ -14,6 +14,7 @@ require 'digest'
 class User < ActiveRecord::Base
   #attr_accessor :password,:author,:admin  # set this on ,then attr_accessible failed
   #attr_accessible :name ,:email,:password ,:password_confirmation,:author,:admin
+  attr_accessor :password_confirmation
   
   has_many :microposts ,:dependent => :destroy
   has_many :relationships , :foreign_key => "follower_id", :dependent => :destroy
