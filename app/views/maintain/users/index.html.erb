@@ -1,1 +1,14 @@
-users 
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">Users
+  </td></tr>
+  <tr style="font-weight:bold;">
+    <td width="40">id</td>
+    <td width="200">name</td>
+    <td width="200">email</td>
+    <td >author</td>
+    <td >admin</td>
+  </tr>
+  <%=render @users%>
+  <!--tr><td align="center" colspan="7"><%#=link_to "添加",new_maintain_user_path%></td></tr-->
+
+</table>

@@ -23,6 +23,7 @@ class Maintain::ChaptersController < Maintain::BaseController
     @section = Section.find(params[:section_id])
     @chapter = Chapter.new(params[:chapter])
     @chapter.book_id = @book.id
+    @chapter.section_id = @section.id
     if @chapter.save
       redirect_to(:action => 'show', :id => @chapter)
     else

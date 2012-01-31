@@ -31,7 +31,9 @@ Hybook::Application.routes.draw do
   resources :users,:categories 
   resource :user
   resources :books do
-    resources :chapters
+    resources :sections do
+      resources :chapters
+    end
   end
 
   match '/toplist',:to=> 'pages#toplist'

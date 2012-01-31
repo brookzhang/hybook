@@ -37,6 +37,7 @@ class Maintain::BooksController < Maintain::BaseController
   
   def edit
     @book = Book.find(params[:id])
+    @catetories = Category.where(" parent_id > 0"  ).order("sequence asc").collect { |item| [item.parent.title + ' -> ' +item.title,item.id] }
   end
 
   def update

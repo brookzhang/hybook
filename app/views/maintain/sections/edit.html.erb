@@ -1,2 +1,6 @@
-<h1>Maintain::Section#edit</h1>
-<p>Find me in app/views/maintain/section/edit.html.erb</p>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="2">
+    [<%=link_to(@book.title,maintain_book_section_chapters_path,:class=>"TitleInDarkBlue")%>]
+  </td></tr>
+  <%=render 'form'%>
+</table>

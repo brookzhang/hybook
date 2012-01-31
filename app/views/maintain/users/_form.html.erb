@@ -1,0 +1,5 @@
+<%=form_for [:maintain,@user]  do |f| %>
+  <tr><td align="right">author</td><td align="left"><%=f.check_box :author %></td></tr>
+  <tr><td align="right">admin</td><td align="left"><%=f.check_box :admin %></td></tr>
+  <tr><td align="center" colspan="2"><%=f.submit "submit"%></td></tr>
+  <%end%>

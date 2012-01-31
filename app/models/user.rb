@@ -12,8 +12,8 @@
 require 'digest'
 
 class User < ActiveRecord::Base
-  attr_accessor :password  # set this on ,then attr_accessible failed
-  attr_accessible :name ,:email,:password ,:password_confirmation
+  #attr_accessor :password,:author,:admin  # set this on ,then attr_accessible failed
+  #attr_accessible :name ,:email,:password ,:password_confirmation,:author,:admin
   
   has_many :microposts ,:dependent => :destroy
   has_many :relationships , :foreign_key => "follower_id", :dependent => :destroy
@@ -24,8 +24,8 @@ class User < ActiveRecord::Base
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   
 #  validates :name ,:presence =>true ,:length=>{:maximum=>50}
-  validates :email,:presence=>true,:format =>{:with=>email_regex} ,:uniqueness=>{:case_sensitive=>false}
-  validates :password,:presence=>true,:confirmation=>true,:length=>{:within=>6..40} 
+  #validates :email,:presence=>true,:format =>{:with=>email_regex} ,:uniqueness=>{:case_sensitive=>false}
+  #validates :password,:presence=>true,:confirmation=>true,:length=>{:within=>6..40} 
   
   
 
