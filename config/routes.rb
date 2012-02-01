@@ -2,6 +2,14 @@ Hybook::Application.routes.draw do
   
 
 
+  get "sections/index"
+
+  get "sections/show"
+
+  get "books/index"
+
+  get "books/show"
+
   namespace 'maintain' do
     resource :session
     resources :comments,:categories,:users,:books

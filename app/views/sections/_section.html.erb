@@ -1,0 +1,13 @@
+<tr><th colspan=4><%=link_to section.title,book_section_path(@book,section)%></td></tr>
+<%@chapters = Chapter.where("section_id=?",section.id) %>
+<tr>
+<%
+i=0
+@chapters.each do |c|
+  %><td><%=link_to c.title,book_section_chapter_path(@book,section,c)%></td><%
+  i=i+1
+  if i%4==0
+    %></tr><tr><%
+  end
+end%>
+</tr>

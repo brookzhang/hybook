@@ -1,0 +1,13 @@
+
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="4">
+    [<%=link_to @book.title ,book_path(@book),:class=>"TitleInDarkBlue"%> - 
+    <%=@section.title%>] 
+  </td></tr>
+  <%
+  @chapters.each do |c|
+    %><tr><td><%=link_to c.title,book_section_chapter_path(@book,@section,c)%></td></tr><%
+  end%>
+  <tr><td align="center" colspan="4"></td></tr>
+
+</table>

@@ -1,10 +1,18 @@
 <TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
   <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">
-  	[<%=link_to(@book.title,book_path,:class=>"TitleInDarkBlue")%>]
-		
+  	[<%=link_to(@book.title,book_path(@book),:class=>"TitleInDarkBlue")%>
+		- 
+    <%=link_to(@section.title,book_section_path(@book,@section),:class=>"TitleInDarkBlue")%>]
 		</td></tr>
   <tr><td class="TdLightBlueContainer" align="center"><%=@chapter.title%> </td></tr>
   <tr><td align="left"><%=raw simple_format h(@chapter.content.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  </td></tr>
-  <tr><td align="center" colspan="7"><  ></td></tr>
+  <tr><td align="center" colspan="7">
+    <%if @chapter.previous_id>0 %><%=link_to "上一章",book_section_chapter_path(@book,@section,@chapter.previous_id) %>
+    <%else%>上一章  
+    <%end%>
+    <%if @chapter.next_id>0 %><%=link_to "下一章",book_section_chapter_path(@book,@section,@chapter.next_id) %>
+    <%else%>下一章  
+    <%end%>
+    </td></tr>
 
 </table>

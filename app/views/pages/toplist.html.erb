@@ -1,3 +1,39 @@
-<h1>Pages#toplist</h1>
-<p>Find me in app/views/pages/toplist.html.erb</p>
-<%= render @categories %>
+<TABLE cellSpacing=0 cellPadding=0 class="TableContentBlock">
+  <TR>
+    <TD class="TdLeftMenuFrame" vAlign=top>
+        <TABLE cellSpacing=0 cellPadding=0 width="100%" >
+          <TR>
+            <TD class="TdDarkBlueContainer" vAlign=top>&nbsp;排序方式</td>
+          </tr>
+          <TR>
+            <TD  vAlign=top class="TdWhiteContainer">
+               by all_click
+               by month_click
+               by week_click
+               by day_click
+               
+            <div class="DivBottomBorderline"></div>
+            <br>
+            </td>
+          </tr>
+        </table>
+      </td>
+      
+      <TD width="1px"></TD>
+      
+      <TD class="TdRightContentFrame" vAlign=top>
+        
+        <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
+          <TR>
+            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;Top list  </td>
+          </tr>
+          <TR>
+            <TD class="TdWhiteContainer" vAlign=top >
+            <%=render @books%>
+            </td>
+          </tr>
+            
+        </table>
+      </td>
+    </tr>
+</table>

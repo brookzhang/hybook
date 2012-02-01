@@ -31,12 +31,11 @@
         
         <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
           <TR>
-            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;<%=@category.title%> last update </td>
+            <TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;<%=@category.title%>  </td>
           </tr>
           <TR>
             <TD class="TdWhiteContainer" vAlign=top >
-            group.ListNewChapter(15)
-          new review
+            <%=render @books%>
             </td>
           </tr>
             

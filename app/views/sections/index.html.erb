@@ -1,0 +1,8 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="4">
+    [<%=link_to @book.title ,book_path(@book),:class=>"TitleInDarkBlue"%>] - 分卷
+  </td></tr>
+  <%=render @sections%>
+  <tr><td align="center" colspan="4"></td></tr>
+
+</table>

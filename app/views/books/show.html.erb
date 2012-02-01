@@ -1,0 +1,8 @@
+<TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">
+  	[<%=@book.title%>]
+		</td></tr>
+  <tr><td class="TdLightBlueContainer" align="center"><%=@book.author%> </td></tr>
+  <tr><td align="left"><%=raw simple_format h(@book.description.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  </td></tr>
+  <tr><td align="center" colspan="7"><%=link_to "点击阅读",book_sections_path(@book) %></td></tr>
+</table>

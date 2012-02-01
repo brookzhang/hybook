@@ -10,7 +10,7 @@ class PagesController < ApplicationController
 
   def toplist
     @title = "Toplist"
-    @categories = Category.all()
+    @books = Book.order("all_click desc").limit(20)
   end
 
   def about
