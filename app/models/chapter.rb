@@ -48,23 +48,27 @@ class Chapter < ActiveRecord::Base
   def new_click
     @book = Book.find(self.book_id)
     @book.all_click += 1
-    @book.last_click_at = @book.last_click_at.nil? ? DateTime.now : @book.last_click_at
-    if DateTime.now - 1.days >= @book.last_click_at
+    @book.last_click_at = @book.last_click_at.nil? ? Time.now : @book.last_click_at
+    if (Time.now.at_beginning_of_day - @book.last_click_at)>=0
       @book.day_click =1
-    else
-      @book.day_click +=1
-      if DateTime.now -  1.weeks > @book.last_click_at 
+      if (Time.now.at_beginning_of_week - @book.last_click_at) >=0
         @book.week_click =1
       else
         @book.week_click +=1
-        if DateTime.now -  1.months > @book.last_click_at
-          @book.month_click =1
-        else
-          @book.month_click +=1
-        end
       end
+      
+      if (Time.now.at_beginning_of_month - @book.last_click_at) >=0
+        @book.month_click =1
+      else
+        @book.month_click +=1
+      end
+      
+    else
+      @book.day_click +=1
+      @book.week_click +=1
+      @book.month_click +=1
     end
-    @book.last_click_at = DateTime.now
+    @book.last_click_at = Time.now
     @book.save
   end
   
