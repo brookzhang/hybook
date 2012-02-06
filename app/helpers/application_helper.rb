@@ -22,10 +22,16 @@ module ApplicationHelper
     end
     
     if signed_in?
-      link << link_to('myinfo' ,'/maintain/dashboard',:class=>"deepblue")
-      link << link_to('Logout' ,'signout_path', :method =>:delete,:class=>"deepblue")
+      link << link_to('User' ,'/user',:class=>"deepblue")
+      if current_user.author
+        link << link_to('Author' ,'/author',:class=>"deepblue")
+      end
+      if current_user.admin
+        link << link_to('Maintain' ,'/maintain',:class=>"deepblue")
+      end
+      link << link_to('Logout' ,'/signout', :method =>:delete,:class=>"deepblue")
     else
-      link << link_to('Login' ,signin_path,:class=>"deepblue")
+      link << link_to('Login' ,'/signin',:class=>"deepblue")
     end
     
     

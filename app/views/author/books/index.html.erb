@@ -1,0 +1,13 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">作品列表 </td></tr>
+  <tr style="font-weight:bold;">
+    <td>id</td>
+    <td>名称</td>
+    <td>总点击</td>
+    <td></td>
+  </tr>
+  <%=render @books%>
+  <tr><td align="center" colspan="7"><%=link_to "Add",new_author_book_path%></td></tr>
+
+</table>
+<%=will_paginate%>

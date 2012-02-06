@@ -2,7 +2,7 @@
   <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7" align="center">
   	[<%=@book.title%>]
 		</td></tr>
-  <tr><td class="TdLightBlueContainer" align="center">
+  <tr><td class="TdLightBlueContainer" align="center" colspan="7">
     <%=@book.author%> 
     all : <%=@book.all_click%> 
     month : <%=@book.month_click%> 
@@ -11,6 +11,21 @@
     last : <%=@book.last_click_at%> 
     
   </td></tr>
-  <tr><td align="left"><%=raw simple_format h(@book.description.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  </td></tr>
-  <tr><td align="center" colspan="7"><%=link_to "点击阅读",book_sections_path(@book) %></td></tr>
+  <tr>
+    <td align="left" width="100">
+    <%=link_to "点击阅读",book_sections_path(@book) %><br />
+    <%=link_to "作者信息",user_path(@book.user_id) %><br />
+    <%if signed_in?%>
+      <%if @book.exits_in_favorite(current_user.id)%>
+        已收藏了
+      <%else%>
+        <%=link_to "加到收藏",book_path(@book,:favorite => "Add") %><br />
+      <%end%>
+    <%end%>
+    </td>
+    <td align="left">
+    <%=raw simple_format h(@book.description.gsub('    ','&nbsp;&nbsp;&nbsp;&nbsp;').html_safe)%>  
+    </td>
+  </tr>
+  <tr><td align="center" colspan="7">&nbsp;</td></tr>
 </table>

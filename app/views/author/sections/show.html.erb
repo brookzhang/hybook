@@ -1,0 +1,13 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer" align="center" vAlign=top >
+    [<%=link_to(@book.title,author_book_path(@book),:class=>"TitleInDarkBlue")%> - <%=@section.title%>]</td></tr>
+  <tr style="font-weight:bold;"><td>
+    <%=raw simple_format h(@section.description.gsub(' ','&nbsp;').html_safe) %>
+  </td></tr>
+  <tr><td align="center" >
+    <%=link_to "修改",edit_author_book_section_path%>
+    &nbsp;
+    <%=link_to '章节',author_book_section_chapters_path(@book,@section)%>
+  </td></tr>
+
+</table>

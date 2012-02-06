@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     @title = "Bookroom"
     #@microposts =  @user.microposts.paginate(:page=>params[:page])
     #@microposts = @user.microposts ? @user.microposts.paginate(:page=>params[:page]) : @user.microposts
+    @books = Book.where("user_id=?",@user.id).order("id desc")
   end
   
   def create

@@ -1,39 +1,30 @@
 Hybook::Application.routes.draw do
-  
-
-
-  get "sections/index"
-
-  get "sections/show"
-
-  get "books/index"
-
-  get "books/show"
-
   namespace 'maintain' do
+    match '/dashboard',:to=> 'dashboard#show'
     resource :session
+    resources :books
     resources :comments,:categories,:users,:books
+    root :to => 'dashboard#show'
+  end
+  
+  namespace :user do
+    match '/dashboard',:to=> 'dashboard#show'
+    resources :users,:favorites
+    root :to => 'dashboard#show'
+  end
+  
+  namespace :author do
+    match '/dashboard',:to=> 'dashboard#show'
+    resources :users
     resources :books do
       resources :sections do
         resources :chapters 
       end
     end
-    
-    match '/dashboard',:to=> 'dashboard#show'
-    match '/user_info',:to=> 'user_info#show'
-    match '/user_info/edit',:to=> 'user_info#edit'
-    match '/user_info/update',:to=> 'user_info#update'
-    match '/author_info',:to=> 'author_info#show'
-    match '/author_info/edit',:to=> 'author_info#edit'
-    match '/author_info/update',:to=> 'author_info#update'
-    
     root :to => 'dashboard#show'
   end
   
-
-  get "sessions/new"
-  
-  resources :sessions , :only =>[:new,:create,:destroy]
+  resources :sessions #, :only =>[:new,:create,:destroy]
   resources :microposts,:only=>[:create,:destroy]
   resources :relationships, :only =>[:create , :destroy]
   resources :users,:categories 
@@ -48,7 +39,7 @@ Hybook::Application.routes.draw do
   match '/about',:to=>'pages#about'
   match '/help',:to=>'pages#help'
   match '/signup',:to=>'users#new'
-  match '/signin',:to => 'sessions#show'
+  match '/signin',:to => 'sessions#new'
   match '/signout', :to=>'sessions#destroy'
   
   root :to=>'pages#home'

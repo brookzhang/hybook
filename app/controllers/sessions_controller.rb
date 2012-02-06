@@ -1,7 +1,9 @@
 class SessionsController < ApplicationController
-  def show
+  
+  def new
     @title = 'Sign in'
     sign_out
+    @user = User.new
   end
   
   def create
@@ -13,7 +15,7 @@ class SessionsController < ApplicationController
       render 'show'
     else
       sign_in user
-      redirect_back_or 'maintain/dashboard'
+      redirect_to '/user'
       #redirect_to user
     end
   end

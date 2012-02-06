@@ -1,0 +1,18 @@
+<TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top >
+    [<%=link_to(@book.title,author_book_section_chapters_path,:class=>"TitleInDarkBlue")%>
+     - 
+    <%=link_to @section.title ,author_book_section_path(@book,@section),:class=>"TitleInDarkBlue"%>
+    
+    ]
+    </td></tr>
+  <tr><td class="TdLightBlueContainer"><%=@chapter.title%> </td></tr>
+	<tr><td align="left"><%=raw simple_format h(@chapter.content.gsub(' ','&nbsp;').html_safe)%>  </td></tr>
+  <tr><td align="center" colspan="7">
+    [<%=link_to "修改",edit_author_book_section_chapter_path%>
+    <%=link_to "新增",new_author_book_section_chapter_path%>
+    ]
+    
+  </td></tr>
+
+</table>

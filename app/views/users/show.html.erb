@@ -1,30 +1,24 @@
-<TABLE cellSpacing=0 cellPadding=0 width="800px" border=0>
-  <TR>
-    <TD width="169px" vAlign=top><%=render 'menu'%></td>
-    <TD width="1px"></TD>
-    <TD width="630px" vAlign=top>
-    <TABLE cellSpacing=0 cellPadding=0 width="100%"  >
-      <TR><TD class="TdDarkBlueContainer"  vAlign=top>&nbsp;我的资料 </td></tr>
-      <TR><TD class="TdLightContainer" vAlign=top >
-	        <%= gravatar_for @user %> <%= @user.name %>
-	        <br />
-	        <%=render 'follow_form' if signed_in?%>
-	        <% unless @user.microposts.empty? %>
-		        <table class="microposts" summary="User microposts">
-		          <%= render @microposts %>
-		        </table>
-		        <%= will_paginate @microposts %>
-	        <% end %>
-	        <br><br>
-	        <strong>Name</strong> <%= @user.name %><br />
-          <strong>URL</strong> <%= link_to user_path(@user), @user %><br />
-          <strong>Microposts</strong> <%= @user.microposts.count %>
-          <%=render 'shared/stats'%>
-        </td>
-      </tr>
-    </table>
+<TABLE cellSpacing=0 cellPadding=3 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7" align="center">
+  	[<%=@title%>]
+		</td></tr>
+  <tr><td class="TdLightBlueContainer" align="center" colspan="7">
+  </td></tr>
+  <tr>
+    <td align="left" width="100">
+      笔名:<%=@user.author_name%><br />
+    </td>
+    <td align="left">
+    作者简介:<br />
+    <%if !@user.description.nil? %>
+    <%=raw simple_format h(@user.description.gsub(' ','&nbsp;').html_safe)%>  
+    <%end%>
+    &nbsp;
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="7">
+    <TABLE cellSpacing=0 cellPadding=0 width="100%" border=0 ><%=render @books%></table>
     </td>
   </tr>
 </table>
-
-

@@ -1,2 +1,0 @@
-module Maintain::SectionsHelper
-end

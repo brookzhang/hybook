@@ -1,0 +1,2 @@
+module Author::SectionsHelper
+end

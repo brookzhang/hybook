@@ -5,5 +5,9 @@ class BooksController < ApplicationController
 
   def show
     @book = Book.find(params[:id])
+    if params[:favorite] == "Add"
+      @book.add_to_favorite(current_user.id,0)
+      flash[:success] = "Add to favorite successfully!"
+    end
   end
 end
