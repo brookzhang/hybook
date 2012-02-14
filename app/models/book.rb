@@ -1,7 +1,7 @@
 class Book < ActiveRecord::Base
   belongs_to :category 
   
-  validate :
+  #validate :
   
   
   def add_to_favorite(user_id,chapter_id)

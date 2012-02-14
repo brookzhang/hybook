@@ -1,0 +1,14 @@
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="7">Lookups </td></tr>
+  <tr style="font-weight:bold;">
+    <td class="TdLightContainer">id</td>
+    <td class="TdLightContainer">code</td>
+  	<td class="TdLightContainer">category</td>
+    <td class="TdLightContainer">description</td>
+    <td class="TdLightContainer"></td>
+  </tr>
+	<%=render @lookups%>
+  <tr><td align="center" colspan="7" class="forumRow"><%=link_to "Add",new_maintain_lookup_path%></td></tr>
+
+</table>
+<%=will_paginate%>

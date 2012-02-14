@@ -1,2 +1,9 @@
-<h1>Maintain::Categories#show</h1>
-<p>Find me in app/views/maintain/categories/show.html.erb</p>
+<TABLE cellSpacing=0 cellPadding=5 width="100%" border=1 >
+  <TR><TD class="TdDarkBlueContainer"  vAlign=top colspan="2">&nbsp;category </td></tr>
+  <tr><td align="right" width="200">parent</td><td align="left"><%= @category.parent.title %></td></tr>
+  <tr><td align="right">title</td><td align="left"><%= @category.title %></td></tr>
+  <tr><td align="right">description</td><td align="left"><%= @category.description %></td></tr>
+  <tr><td align="right">sequence</td><td align="left"><%= @category.sequence %></td></tr>
+  <tr><td align="right">show_on_header</td><td align="left"><%= @category.show_on_header %></td></tr>
+  <tr><td align="center" colspan="2"><%=link_to "Edit",edit_maintain_category_path%></td></tr>
+</table>

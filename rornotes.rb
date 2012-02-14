@@ -36,8 +36,8 @@ rails g migration AlterAuthorOfBook
 rails g controller maintain/Sections index show new edit
 rake routes  # show all routes
 
-sudo gem sources -r http://rubygems.org/
-sudo gem sources -a http://ruby.taobao.org
+sudo gem sources -r http://rubygems.org/      #terminal ,remove source
+sudo gem sources -a http://ruby.taobao.org    #add source
 
 
 #========================================================== user from 20110714 to 20110914

@@ -1,0 +1,6 @@
+<%=form_for [:maintain,@lookup] do |f| %>
+  <tr><td align="right">code</td><td align="left"><%= f.text_field :code  %></td></tr>
+  <tr><td align="right">category</td><td align="left"><%=f.text_field :category %></td></tr>
+  <tr><td align="right">description</td><td align="left"><%=f.text_field :description %></td></tr>
+  <tr><td align="center" colspan="2"><%=f.submit "submit"%></td></tr>
+  <%end%>

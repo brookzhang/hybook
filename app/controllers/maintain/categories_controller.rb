@@ -4,6 +4,7 @@ class Maintain::CategoriesController < Maintain::BaseController
   end
 
   def show
+    @category = Category.find(params[:id])
   end
 
   def edit
