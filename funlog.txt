@@ -1,0 +1,11 @@
+
+
+#==========================================================plan
+1.淡化阅读,强化读者交互
+2.只可以对添加到收藏的书发表评论.评论可以被跟帖post,post可以被移除出此评论,
+3.microposts可以被fork,可以作为comment的跟帖, 也可以作为对book的单独microposts但不列在book页面(只显示数量,可在单独页面查看),只显示给follower
+4.user可以互相follow,个人页面可以看到followed user的microposts,comment, favorite book的最后更新
+
+
+
+
