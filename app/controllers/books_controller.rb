@@ -10,4 +10,9 @@ class BooksController < ApplicationController
       flash[:success] = "Add to favorite successfully!"
     end
   end
+  
+  
+  
+  
+  
 end
